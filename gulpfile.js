@@ -44,7 +44,7 @@ function fnJS(){
 //6、Scss
 function fnCss(){
     return gulp.src('./src/sass/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass())
     .pipe(cssnano())
     .pipe(rename({suffix : '.min'}))
     .pipe(gulp.dest('./dist/css'));
