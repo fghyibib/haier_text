@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页</title>
+    <link rel="stylesheet" href="../css/registor.min.css">
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <script src="../../js/drag.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <a href="#"><img src="../img/haier2019_logo.jpg" class="logo"></a>
+        <b>账号注册</b>
+        <p>我已注册,&nbsp;&nbsp;<a href="login.html">直接登录</a></p>
+    </div>
+    <!-- registor -->
+    <div class="reg">
+        <div class="registor">
+            <h1>一个账号便利享受Haier所有服务</h1>
+            <div class="reg_one">
+                <div class="reg_one-one">
+                    <span>手机号码</span>
+                    <input type="text" id="uname" placeholder="购买,安装,报修,手机注册更方便">
+                    <i>使用<a href="#">邮箱注册</a>或<a href="#">短信验证</a></i>
+                </div>
+                <div class="reg_one-two">
+                    <span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+                    <input type="password" id="upwd" placeholder="6-16位,数字,字母或符号组合">
+                </div>
+                <div class="reg_one_three">
+                    <span>验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证</span>
+                    <div id="drag">
+                        <!-- <div class="drag_bg"></div>
+                        <div class="drag_text">拖动滑块验证</div>
+                        <div class="handler handler_bg"></div> -->
+                    </div>
+                </div>
+                <div class="reg_one_fore">
+                    <span>激&nbsp;&nbsp;活&nbsp;&nbsp;码</span>
+                    <input type="text" placeholder="短信验证码" id="jhm">
+                    <a href="#">发送验证码到手机</a>
+                </div>
+                <div class="reg_one_five">
+                    <span>邀&nbsp;&nbsp;请&nbsp;&nbsp;人</span>
+                    <input type="text" placeholder="登录名/手机号/邀请码" id="sjh">
+                </div>
+                <input type="buttom" value="注册" class="btn">
+                <div class="reg_one_seven">
+                    <input type="checkbox">我同意<a href="https://www.haier.com/cn/RegServiceTerms/">《海尔注册用户服务条款》 &nbsp;&nbsp;&nbsp;&nbsp;《法律声明及隐私权政策》</a>
+                </div>
+            </div>
+        </div>
+        <p class="reg_p">Haier账号支持所有产品和服务</p>
+    </div>
+    <!-- footer -->
+    <div class="foo">
+         <div class="footer">
+            <div class="foo_one">
+                <a href="#">关于海尔</a> |
+                <a href="#">法律声明</a> |
+                <a href="#">联系我们</a> |
+                <a href="#">帮助中心</a> |
+                <a href="#">海尔门店</a>
+            </div>
+            <div class="foo_two">
+                <a href="#">鲁ICP备09096283</a> | © 2000-2020 Haier.com. All rights reserved.
+            </div>
+        </div>
+    </div>
+   
+
+
+    <script src="../../js/cookie.js"></script>
+    <script src="../js/registor.min.js"></script>
+    <script type="text/javascript">
+        $('#drag').drag();
+    </script>
+</body>
+</html>
