@@ -1,0 +1,195 @@
+//导入公共样式
+@import 'public';
+
+//list
+.list{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 50px;
+    .list_one{
+        width: 1190px;
+        height: 62px;
+        line-height: 62px;
+        margin: 0 auto;
+        background-color: rgb(230, 227, 227);
+        display: flex;
+        align-items: center;
+        a{
+            display: block;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        a:last-of-type:hover{
+            color: blue;
+        }
+        img{
+            margin-left: 20px;
+        }
+    }
+    .list_two{
+        width: 1190px;
+        height: 96px;
+        margin: 0 auto;
+        border: 1px solid rgb(230, 227, 227);
+        p{
+            margin: 0 auto;
+            display: block;
+            width: 1130px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(230, 227, 227);
+            span{
+                color: blue;
+            }
+            i{
+                font-size: 12px;
+                color: rgb(197, 197, 197);
+                font-style: normal;
+                text-indent: 20px;
+            }
+        }
+        p:last-of-type{
+            border: none;
+            height: 40px;
+            font-size: 12px;
+            span{
+                padding-right: 50px;
+            }
+            a{
+                margin-right: 30px;
+            }
+        }
+    }
+    .list_three{
+        width: 1190px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 150px;
+        .list_three_one{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 180px;
+            h3{
+                font-size: 16px;
+                width: 180px;
+                height: 60px;
+                font-weight: 300;
+                text-align: center;
+                line-height: 60px;
+                border: 1px solid rgb(230, 227, 227);
+                border-bottom: none;
+                box-sizing: border-box;
+            }
+            ul{
+                width: 180px;
+                height: 876px;
+                box-sizing: border-box;
+                border: 1px solid rgb(230, 227, 227);
+                li{
+                    margin: 0 auto;
+                    width: 154px;
+                    height: 174px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-bottom: 1px solid rgb(230, 227, 227);
+                    img{
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    p{
+                        width: 150px;
+                        font-size: 12px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .list_three_two{
+            width: 1010px;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;;
+            justify-content: flex-start;
+            padding-left: 5px;
+            .list_fore{
+                width: 215px;
+                height: 360px;
+                transition: all .5s;
+                margin-left: 28px;
+                margin-top: 20px;
+                img{
+                    margin: 0 auto;
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                }
+                p{
+                    width: 215px;
+                    height: 44px;
+                    line-height: 44px;
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+                ul{
+                    font-size: 12px;
+                    color: rgb(194, 191, 191);
+                    margin-left: 10px;
+                    li{
+                        list-style: square;
+                        text-indent: 15px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            div:hover{
+                box-shadow: 0 0 20px 5px #bebcc3;
+            }
+        }
+    }
+    .list_five{
+        margin-top: 50px;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        input{
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+            margin-right: 10px;
+            background-color: white;
+            border: 1px solid #bebcc3;
+            cursor: pointer;
+        }
+        input:first-of-type,input:last-of-type{
+            width: 70px;
+            height: 35px;
+        }
+        input:nth-of-type(2){
+            background-color: blue;
+            color: white;
+        }
+        input:nth-of-type(3):hover{
+            color: blue;
+            border: 1px solid blue;
+        }
+        input:nth-of-type(4):hover{
+            color: blue;
+            border: 1px solid blue;
+        }
+        input:nth-of-type(5):hover{
+            color: blue;
+            border: 1px solid blue;
+        }
+    }
+}
+#list_list{
+    background-color: rgb(230, 230, 230);
+}
