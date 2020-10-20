@@ -129,6 +129,11 @@
                 a:hover{
                     cursor: pointer;
                 }
+                #btn_one{
+                    width: 150px;
+                    height: 30px;
+                    margin: auto;
+                }
             }
             .btn{
                 display: block;
@@ -147,8 +152,12 @@
                 cursor: pointer;
             }
             .reg_one_seven{
-                margin-top: 40px;
+                margin-top: 50px;
+                margin-left: -20px;
                 line-height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 input{
                     width: 20px;
                     height: 20px;

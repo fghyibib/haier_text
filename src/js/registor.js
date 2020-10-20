@@ -8,7 +8,7 @@ class Reg{
         this.uname = this.getEle('#uname');
         this.upwd = this.getEle('#upwd');
         this.sjh = this.getEle('#sjh');
-        this.jhm = this.getEle('#jhm');
+        // this.jhm = this.getEle('#jhm');
         //按钮
         this.reg = document.querySelector('.btn');
         //判断内容是否正确
@@ -21,7 +21,7 @@ class Reg{
         //判断手机号
         this.uname.onblur = function(){
             let uname = this.value;
-            let re = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+            let re = /(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{11}/;
             if(re.test(uname)){
                 that.arr[0] = true;
             }else{
@@ -32,7 +32,7 @@ class Reg{
         //密码
         this.upwd.onblur = function(){
             let upwd = this.value;
-            let re = /^[a-zA-Z]\w{5,16}$/;
+            let re = /[a-zA-Z]\w{5,16}/;
             if(re.test(upwd)){
                 that.arr[1] = true;
             }else{
@@ -41,16 +41,16 @@ class Reg{
             }
         }
         //激活码
-        this.jhm.onblur = function(){
-            let jhm = this.value;
-            let re = /\w/;
-            if(re.test(jhm)){
-                that.arr[2] = true;
-            }else{
-                alert('激活码不合法！');
-                that.arr[2] = false;
-            }
-        }
+        // this.jhm.onblur = function(){
+        //     let jhm = this.value;
+        //     let re = /\w/;
+        //     if(re.test(jhm)){
+        //         that.arr[2] = true;
+        //     }else{
+        //         alert('激活码不合法！');
+        //         that.arr[2] = false;
+        //     }
+        // }
         //邀请人
         this.sjh.onblur = function(){
             let sjh = this.value;
@@ -93,12 +93,37 @@ class Reg{
         }
     }
 
-
-
-
     //获取元素的工具方法
     getEle(selector){
         return document.querySelector(selector);
     }
 }
 new Reg();
+
+window.onload = function(){
+    var jhm = document.getElementById('jhm');
+    var btn_one = document.getElementById('btn_one');
+    function getYanZhengMa(){
+        var arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+        var str = "";
+        for(var i = 0;i < 5; i ++){
+            var c = parseInt(Math.random()*arr.length);
+            str += arr[c];
+        }
+        btn_one.value = str;
+    }
+    getYanZhengMa();
+    btn_one.onclick = function(){
+        getYanZhengMa();
+    };
+    jhm.onblur = function(){
+        if(jhm.value != btn_one.value){
+            alert("您输入的验证码不正确，请重新输入");
+            jhm.value = "";
+            getYanZhengMa();
+            return;
+        }else{
+            alert("验证码输入成功");
+        }
+    }
+};

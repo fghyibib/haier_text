@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/login.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <a href="#"><img src="../img/haier2019_logo.jpg" class="logo"></a>
+        <b>账号注册</b>
+        <p><a href="registor.html">注册海尔账号</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">梦想
+                +会员首次激活登录</a></p>
+    </div>
+
+    <!-- login -->
+    <div class="log">
+        <div class="login">
+            <img src="../img/loginImg.png" alt="">
+            <div class="log_one" id="logOne">
+                <div class="log_one_one">登录海尔账号</div>
+                <ul>
+                    <li class="logOne_one">
+                        <img src="../img/login2.png" alt=""><b class="b_one">普通登录</b>
+                    </li>
+                    <li class="logOne_two">
+                        <img src="../img/login3.png" alt=""><b>使用手机</br>动态密码登录</b>
+                    </li>
+                    <li class="logOne_three">
+                        <img src="../img/login5.png" alt="">
+                    </li>
+                </ul>
+                <div class="log_one_two">
+                    <img src="../img/login8.png" alt="">
+                    <input type="text" placeholder="手机号/验证邮箱/用户名" class="uname">
+                </div>
+                <div class="log_one_two">
+                    <img src="../img/login9.png" alt="">
+                    <input type="password" placeholder="登录密码" class="upwd">
+                    <a href="https://user.haier.com/ids/cn/forget_password.jsp?regFrom=haier2&returnUrl=https://www.haier.com/cn/"><img src="../img/login10.png" alt=""></a>
+                </div>
+                <div class="log_one_three">
+                    <input type="checkbox">我同意<a href="https://www.haier.com/cn/RegServiceTerms/">《海尔注册用户服务条款》 &nbsp;&nbsp;《法律声明及隐私权政策》</a>
+                </div>
+                <div class="log_one_three log_one_fore">
+                    <input type="checkbox">两周内免登陆
+                </div>
+                <input type="buttom" value="登录" class="btn">
+            </div> 
+
+
+            <div class="log_two" id="logTwo">
+                <div class="log_one_one">手机登录海尔账号</div>
+                <ul>
+                    <li class="logOne_one">
+                        <img src="../img/login1.png" alt=""><b>普通登录</b>
+                    </li>
+                    <li class="logOne_two">
+                        <img src="../img/login4.png" alt=""><b class="b_one">使用手机</br>动态密码登录</b>
+                    </li>
+                    <li class="logOne_three">
+                        <img src="../img/login5.png" alt="">
+                    </li>
+                </ul>
+                <div class="log_one_two">
+                    <img src="../img/login8.png" alt="">
+                    <input type="text" placeholder="手机号" class="uname_one">
+                </div>
+                <div class="log_one_two">
+                    <div id="drag">
+                        
+                    </div>
+                </div>
+                <div class="log_one_three" id="log_aaa">
+                    <input type="checkbox">我同意<a href="https://www.haier.com/cn/RegServiceTerms/">《海尔注册用户服务条款》 &nbsp;&nbsp;《法律声明及隐私权政策》</a>
+                </div>
+                <div class="log_one_three log_one_fore">
+                    <input type="checkbox">两周内免登陆
+                </div>
+                <input type="buttom" value="登录" class="btn_one">
+            </div>
+
+            <div class="log_three" id="logThree">
+                <div class="log_one_one">二维码登录海尔账号</div>
+                <ul>
+                    <li class="logOne_one">
+                        <img src="../img/login1.png" alt=""><b>普通登录</b>
+                    </li>
+                    <li class="logOne_two">
+                        <img src="../img/login3.png" alt=""><b>使用手机</br>动态密码登录</b>
+                    </li>
+                    <li class="logOne_three">
+                        <img src="../img/login6.png" alt="">
+                    </li>
+                </ul>
+                <div class="log_one_two">
+                    <span>手机APP扫描</br>安全登录</span>
+                    <img src="../img/login7.png" alt="">
+                </div>
+                <input type="buttom" value="登录" class="btn">
+            </div>
+            <div class="log_fore">
+                <a href="#">微信</a>
+                <a href="#">微博</a>
+                <a href="#">网易</a>
+                <a href="#">人人网</a>
+                <a href="#">开心网</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="foo">
+        <div class="footer">
+            <div class="foo_one">
+                <a href="#">关于海尔</a> |
+                <a href="#">法律声明</a> |
+                <a href="#">联系我们</a> |
+                <a href="#">帮助中心</a> |
+                <a href="#">海尔门店</a>
+            </div>
+            <div class="foo_two">
+                <a href="#">鲁ICP备09096283</a> | © 2000-2020 Haier.com. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <script src="../../js/cookie.js"></script>
+    <script src="../js/login.min.js"></script>
+    <script src="../../js/drag.js"></script>
+    <script type="text/javascript">
+        $('#drag').drag();
+    </script>
+</body>
+
+</html>
