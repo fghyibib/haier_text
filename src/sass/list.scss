@@ -2,6 +2,9 @@
 @import 'public';
 
 //list
+#lis{
+    height: 2540px;
+}
 .list{
     width: 100%;
     background-color: white;
@@ -82,6 +85,9 @@
                 border-bottom: none;
                 box-sizing: border-box;
             }
+            img:hover{
+                cursor: pointer;
+            }
             ul{
                 width: 180px;
                 height: 876px;
@@ -108,6 +114,10 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         text-align: center;
+                    }
+                    p:first-of-type:hover{
+                        cursor: pointer;
+                        color: blue;
                     }
                 }
             }
