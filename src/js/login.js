@@ -24,9 +24,9 @@ class Login{
     }
     init(){
         //用户名
-        this.uname = this.getEle('.uname');
+        this.uname = this.getEle('#uname');
         //密码
-        this.upwd = this.getEle('.upwd');
+        this.upwd = this.getEle('#upwd');
         //按钮
         this.btn = this.getEle('.btn');
         //检测数组
@@ -40,7 +40,7 @@ class Login{
         //前端检测
         this.uname.onblur = function(){
             //用户名
-            let uname = this.uname;
+            let uname = this.value;
             //正则
             let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
@@ -79,7 +79,7 @@ class Login{
                     //判断密码是否正确
                     if(upwd === cookie_obj[uname]){
                         alert('登录成功');
-                        location.href = 'product.html';
+                        location.href = '../index.html';
                     }else{
                         alert('密码错误');
                     }
@@ -107,9 +107,9 @@ class LoginOne{
     }
     init(){
         //用户名
-        this.uname = this.getEle('.uname_one');
+        this.uname = this.getEle('#uname_one');
         //按钮
-        this.btn = document.querySelectorAll('.btn_one');
+        this.btn = document.querySelector('.btn_one');
         //检测数
         this.arr = false;
         //添加事件 
@@ -120,14 +120,14 @@ class LoginOne{
         //前端检测
         this.uname.onblur = function(){
             //用户名
-            let uname = this.uname;
+            let uname = this.value;
             //正则
             let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
                 that.arr = true;
             }else{
                 alert('用户名不合法！');
-                this.arr = false;
+                that.arr = false;
             }
         }
         //后端检测
@@ -142,16 +142,14 @@ class LoginOne{
                 let cookie_obj = convertStrToObj(cookie_str);
                 //对象中检测uname是否存在
                 if(uname in cookie_obj){
-                    //判断密码是否正确
-                    if(upwd === cookie_obj[uname]){
-                        alert('登录成功');
-                        location.href = '../index.html';
-                    }else{
-                        alert('用户名不存在!');
-                    }
+                     alert('登录成功');
+
                 }else{
-                    alert('请完善信息');
+                    alert('用户名不存在!');
+                    location.href = '../index.html';
                 }
+            }else{
+                alert('请完善信息');
             }
         }
     }
