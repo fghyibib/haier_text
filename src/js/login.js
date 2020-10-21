@@ -42,19 +42,19 @@ class Login{
             //用户名
             let uname = this.uname;
             //正则
-            let re = /(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{11}/;
+            let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
                 that.arr[0] = true;
             }else{
                 alert('用户名不合法！');
-                this.arr[0] = false;
+                that.arr[0] = false;
             }
         }
         this.upwd.onblur = function(){
             //密码
             let upwd = this.value;
             //正则 
-            let re = /[a-zA-Z]\w{5,16}/;
+            let re = /\w{5,16}/;
             if(re.test(upwd)){
                 that.arr[1] = true;
             }else{
@@ -122,7 +122,7 @@ class LoginOne{
             //用户名
             let uname = this.uname;
             //正则
-            let re = /(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{11}/;
+            let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
                 that.arr = true;
             }else{

@@ -12,7 +12,7 @@ class Reg{
         //按钮
         this.reg = document.querySelector('.btn');
         //判断内容是否正确
-        this.arr = [false,false,false,false];
+        this.arr = [false,false,false];
         //添加事件
         this.addEvent(); 
     }
@@ -21,7 +21,7 @@ class Reg{
         //判断手机号
         this.uname.onblur = function(){
             let uname = this.value;
-            let re = /(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{11}/;
+            let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
                 that.arr[0] = true;
             }else{
@@ -40,26 +40,15 @@ class Reg{
                 that.arr[1] = false;
             }
         }
-        //激活码
-        // this.jhm.onblur = function(){
-        //     let jhm = this.value;
-        //     let re = /\w/;
-        //     if(re.test(jhm)){
-        //         that.arr[2] = true;
-        //     }else{
-        //         alert('激活码不合法！');
-        //         that.arr[2] = false;
-        //     }
-        // }
         //邀请人
         this.sjh.onblur = function(){
             let sjh = this.value;
             let re = /\w/;
             if(re.test(sjh)){
-                that.arr[3] = true;
+                that.arr[2] = true;
             }else{
                 alert('激活码不合法！');
-                that.arr[3] = false;
+                that.arr[2] = false;
             }
         }
         //注册按钮
