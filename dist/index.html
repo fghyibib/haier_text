@@ -12,7 +12,7 @@
 <body>
     <!-- 导航栏  hander -->
     <div class="header">
-         <a href="pages/list.html"><img src="img/haier2019_logo.jpg" class="logo"></a>
+        <a href="pages/list.html"><img src="img/haier2019_logo.jpg" class="logo"></a>
         <div class="nav">
             <div class="navOne">智慧家庭
                 <ul class="wisdom">
@@ -265,6 +265,7 @@
             </div>
         </div>
         <input type="text" placeholder="8k解码电视" class="ss">
+        <ul class="ss_ul"></ul>
         <a href="pages/list.html"><img src="img/navimg.png" class="navss"></a>
         <a href="pages/cart.html"><img src="img/cart.png" class="inCart"></a>
         <div class="the_contact"><a href="pages/login.html">
@@ -827,17 +828,17 @@
     <div class="foo">
         <div class="footer">
             <div class="foo_one">
-                <a href="pages/list.html">关于海尔</a> |
-                <a href="pages/list.html">法律声明</a> |
-                <a href="pages/list.html">联系我们</a> |
-                <a href="pages/list.html">帮助中心</a> |
-                <a href="pages/list.html">海尔门店</a>
+                <a href="#">关于海尔</a> |
+                <a href="#">法律声明</a> |
+                <a href="#">联系我们</a> |
+                <a href="#">帮助中心</a> |
+                <a href="#">海尔门店</a>
             </div>
             <div class="foo_two">
-                <a href="pages/list.html">鲁ICP备09096283</a> | © 2000-2020 Haier.com. All rights reserved.
+                <a href="#">鲁ICP备09096283</a> | © 2000-2020 Haier.com. All rights reserved.
             </div>
             <div class="foo_three">
-                <a href="pages/list.html">海尔集团</a> | Haier 全球网站群<a href="pages/list.html">·中国</a><b>关注海尔</b>
+                <a href="#">海尔集团</a> | Haier 全球网站群<a href="pages/list.html">·中国</a><b>关注海尔</b>
                 <div class="foo_three_img">
                     <img src="img/weixin.png" alt="">
                     <img src="img/weixin1.png" alt="">
@@ -853,9 +854,10 @@
     <script src="../js/vue.min.js"></script>
     <script src="../js/vue-slideshow.min.js"></script>
     <script src="js/index.min.js"></script>
+    <script src="../js/public.min.js"></script>
     <script>
         new Vue({
-            el: "pages/list.htmlapp-7",
+            el: "#app-7",
             data: {
                 images: [
                     { src: "img/W020200513531124599697.jpg", href: "pages/list.html1" },

@@ -52,10 +52,10 @@
             height: 440px;
             background-color: white;
             margin: 30px auto 20px;
-            padding-top: 30px;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             div{
-                margin-top: 20px;
+                margin-top: 10px;
                 margin-left: 150px;
                 input{
                     width: 300px;
@@ -117,6 +117,7 @@
                 }
             }
             .reg_one_fore{
+                margin-top: 20px;
                 a{
                     display: inline-block;
                     width: 170px;
@@ -154,7 +155,7 @@
                 cursor: pointer;
             }
             .reg_one_seven{
-                margin-top: 50px;
+                margin-top: 30px;
                 margin-left: -20px;
                 line-height: 30px;
                 display: flex;
@@ -164,6 +165,14 @@
                     width: 20px;
                     height: 20px;
                 }
+            }
+            .re_one,.re_two,.re_three{
+                padding-left: 75px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 10px;
+                margin-bottom: 0;
+                color: red;
             }
         }
     }

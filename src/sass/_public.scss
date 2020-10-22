@@ -33,6 +33,7 @@ input{
     display: flex;
     align-items: center;
     margin: 0 auto;
+    position: relative;
     .logo{
         display: block;
         width: 85px;
@@ -68,8 +69,8 @@ input{
                     height: 160px;
                     background-color: white;
                     position: absolute;
-                    top: 85px;
-                    right: 347px;;
+                    top: 0px;
+                    right: -240px;
                     z-index: 10;
                     display: none;
                     a{
@@ -214,6 +215,16 @@ input{
     }
     .the_contact:hover .the_contact_one{
         display: none;
+    }
+    .ss_ul{
+        position: absolute;
+        top: 65px;
+        right: 170px;
+        width: 100px;
+        height: 100px;
+        li{
+            background-color: rgb(211, 211, 211);
+        }
     }
 }
 

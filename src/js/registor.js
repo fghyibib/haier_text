@@ -8,7 +8,8 @@ class Reg{
         this.uname = this.getEle('#uname');
         this.upwd = this.getEle('#upwd');
         this.sjh = this.getEle('#sjh');
-        // this.jhm = this.getEle('#jhm');
+        this.re_one = this.getEle('.re_one');
+        this.re_two = this.getEle('.re_two');
         //按钮
         this.reg = document.querySelector('.btn');
         //判断内容是否正确
@@ -23,9 +24,10 @@ class Reg{
             let uname = this.value;
             let re = /^1(2|3|4|5|7|8|9)\d{9}$/;
             if(re.test(uname)){
+                that.re_one.innerHTML = " ";
                 that.arr[0] = true;
             }else{
-                alert('用户名不合法!');
+                that.re_one.innerHTML = "<b>X</b> 手机号不正确哦~";
                 that.arr[0] = false;
             }
         }
@@ -34,9 +36,10 @@ class Reg{
             let upwd = this.value;
             let re = /[a-zA-Z]\w{5,16}/;
             if(re.test(upwd)){
+                that.re_two.innerHTML = " ";
                 that.arr[1] = true;
             }else{
-                alert('密码不合法！');
+                that.re_two.innerHTML = "<b>X</b> 密码由字母开头6 ~ 16位哦";
                 that.arr[1] = false;
             }
         }
@@ -47,7 +50,6 @@ class Reg{
             if(re.test(sjh)){
                 that.arr[2] = true;
             }else{
-                alert('激活码不合法！');
                 that.arr[2] = false;
             }
         }
@@ -58,24 +60,20 @@ class Reg{
                 let uname = that.uname.value;
                 let upwd = that.upwd.value;
                 //后端的用户名密码（cookie)
-                /*
-                    key : users
-                    value : {"name":"upwd"}
-                */
                //获取cookie
                let cookie_str = getCookie('users');
                //转为对象
                let cookie_obj = convertStrToObj(cookie_str);
                //判断当前的用户是否在cookie中
                if(uname in cookie_obj){
-                    alert('用户名已存在！'); //bbb
+                    that.re_one.innerHTML = "<b>X</b> 该手机号已被使用哦~"; //bbb
                     return;
                }else{
                    cookie_obj[uname] = upwd;   //{"bbb":"111","aaa":"111","ccc":"111","ddd":"111"}
                }
                //存入cookie
                createCookie('users',JSON.stringify(cookie_obj),{expires : 1});
-               alert('注册成功！');
+               location.href = 'login.html';
             }else{
                 alert('请完善信息！');
             }
@@ -92,6 +90,7 @@ new Reg();
 window.onload = function(){
     var jhm = document.getElementById('jhm');
     var btn_one = document.getElementById('btn_one');
+    var reg = document.querySelector('.re_three');
     function getYanZhengMa(){
         var arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
         var str = "";
@@ -107,12 +106,12 @@ window.onload = function(){
     };
     jhm.onblur = function(){
         if(jhm.value != btn_one.value){
-            alert("您输入的验证码不正确，请重新输入");
+            reg.innerHTML = "<b>X</b> 验证码不正确哦";
             jhm.value = "";
             getYanZhengMa();
             return;
         }else{
-            alert("验证码输入成功");
+            reg.innerHTML = " ";
         }
     }
 };
